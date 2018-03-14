@@ -24,7 +24,7 @@ def fixhist(hb):
 #----------------------------------------------------------------------------
 def main():
     print "="*80
-    Cfilename = 'weights/wine_BDT.class.C'
+    Cfilename = 'results/weights/wine_BDT.class.C'
     treename  = 'Analysis'
 
     # create a Python equivalent of the TMVA BDT class from
@@ -60,8 +60,8 @@ def main():
                        'SO_{2}', 'alcohol',
                        xmin, xmax, ymin, ymax)        
         hist.append( h )
-        h[0].Draw('col')
-        h[1].Draw('same')
+        h.Draw('col')
+        #h[1].Draw('same')
 
     c.SaveAs(".png")
     gApplication.Run()
